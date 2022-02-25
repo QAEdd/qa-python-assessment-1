@@ -74,7 +74,7 @@ def two(arg1):
     elif (arg1 / 5).is_integer():
         return "buzz"
     else:
-        return"null"
+        return "null"
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -119,10 +119,21 @@ def three(input):
 # <HINT>
 
 # Step through the logic here in order to solve the problem, you may find help(range) helpful.
+import re
 
 
 def four(input):
-    return False
+    if input.find('ei') == -1 and input.find('ie') == -1:
+        return True
+    for m in re.finditer('ei', input):
+        if m.start() == 0 or input[m.start() - 1] != 'c':
+            return False
+    for m in re.finditer('ie', input):
+        if m.start() == 0 or input[m.start() - 1] == 'c':
+            return False
+    return True
+
+
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
