@@ -119,8 +119,6 @@ def three(input):
 # <HINT>
 
 # Step through the logic here in order to solve the problem, you may find help(range) helpful.
-import re
-
 
 def four(input):
     if "cie" in input.lower():
@@ -131,7 +129,6 @@ def four(input):
         return True
     elif "ei" in input.lower():
         return False
-
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -176,10 +173,24 @@ def five(input):
 
 # <HINT>
 
-# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
+# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for
+# String manipulation.
 
-def six(string, int, char):
-    return False
+
+def six(string1, int, char):
+    string1 = string1.lower()
+    char = char.lower()
+    list1 = list(string1)
+    int = int - 1
+    if int <= len(string1):
+        if list1[int] == char:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -203,7 +214,6 @@ def six(string, int, char):
 # Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
-    return -1
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
