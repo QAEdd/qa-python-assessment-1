@@ -123,16 +123,14 @@ import re
 
 
 def four(input):
-    if input.find('ei') == -1 and input.find('ie') == -1:
+    if "cie" in input.lower():
+        return False
+    elif "cei" in input.lower():
         return True
-    for m in re.finditer('ei', input):
-        if m.start() == 0 or input[m.start() - 1] != 'c':
-            return False
-    for m in re.finditer('ie', input):
-        if m.start() == 0 or input[m.start() - 1] == 'c':
-            return False
-    return True
-
+    elif "ie" in input.lower():
+        return True
+    elif "ei" in input.lower():
+        return False
 
 
 
