@@ -152,7 +152,11 @@ def four(input):
 # You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def five(input):
-    return 1
+    answer = 1
+    while input != 0:
+        answer = (answer * input)
+        input = input - 1
+    return answer
 
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------
